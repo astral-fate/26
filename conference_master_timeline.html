@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<title>2027 Target Conferences: Complete Master Submission Dossier & Gallery</title>
+<style>
+  :root {
+    --navy-dark: #0F172A;
+    --navy: #1E3A8A;
+    --navy-light: #2563EB;
+    --slate: #475569;
+    --slate-light: #F8FAFC;
+    --border: #E2E8F0;
+    --teal: #0D9488;
+    --teal-bg: #F0FDFA;
+    --amber: #D97706;
+    --amber-bg: #FFFBEB;
+    --rose: #E11D48;
+    --rose-bg: #FFF1F2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #F1F5F9;
+    color: #1E293B;
+    padding: 16px;
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  /* Top App Bar */
+  .app-header {
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .app-header h1 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--navy-dark);
+    letter-spacing: -0.3px;
+  }
+  .app-header p {
+    font-size: 13px;
+    color: var(--slate);
+    margin-top: 2px;
+  }
+  .header-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .badge-count {
+    background: var(--navy-dark);
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+  }
+  .btn-download {
+    background: var(--navy-light);
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Filter & Control Bar */
+  .controls-bar {
+    background: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .filter-btn {
+    background: var(--slate-light);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--slate);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .filter-btn.active {
+    background: var(--navy-dark);
+    color: #FFFFFF;
+    border-color: var(--navy-dark);
+  }
+  .view-toggle {
+    display: flex;
+    background: var(--slate-light);
+    padding: 3px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .view-btn {
+    padding: 5px 12px;
+    border: none;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--slate);
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  .view-btn.active {
+    background: #FFFFFF;
+    color: var(--navy-dark);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  /* Timeline Ribbon */
+  .timeline-ribbon {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    gap: 10px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+  }
+  .ribbon-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    background: var(--slate-light);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+  }
+  .ribbon-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .ribbon-arrow {
+    color: #94A3B8;
+    font-size: 13px;
+  }
+
+  /* CAROUSEL VIEW (SWIPEABLE SLIDER) */
+  .carousel-wrapper {
+    position: relative;
+    margin-bottom: 24px;
+  }
+  .carousel-viewport {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 8px 4px 16px 4px;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x pan-y;
+  }
+  .carousel-slide {
+    flex: 0 0 100%;
+    max-width: 420px;
+    scroll-snap-align: center;
+  }
+  @media (max-width: 480px) {
+    .carousel-slide {
+      flex: 0 0 calc(100% - 24px);
+      max-width: 100%;
+    }
+  }
+  .carousel-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--navy-dark);
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.15s ease;
+  }
+  .carousel-nav-btn:hover {
+    background: var(--slate-light);
+  }
+  .btn-prev { left: -16px; }
+  .btn-next { right: -16px; }
+  @media (max-width: 768px) {
+    .carousel-nav-btn { display: none; }
+  }
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #CBD5E1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .indicator-dot.active {
+    width: 24px;
+    border-radius: 10px;
+    background: var(--navy);
+  }
+
+  /* GRID VIEW */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 16px;
+  }
+  @media (max-width: 640px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* CARD STYLING */
+  .conf-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+  }
+  .conf-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  }
+  .conf-card.urgent-card {
+    border-top: 4px solid var(--rose);
+  }
+  .conf-card.amber-card {
+    border-top: 4px solid var(--amber);
+  }
+  .conf-card.teal-card {
+    border-top: 4px solid var(--teal);
+  }
+  
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .card-rank {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  .badge-rose { background: var(--rose-bg); color: var(--rose); border: 1px solid #FECDD3; }
+  .badge-amber { background: var(--amber-bg); color: var(--amber); border: 1px solid #FDE68A; }
+  .badge-teal { background: var(--teal-bg); color: var(--teal); border: 1px solid #99F6E4; }
+  
+  .mode-pill {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+  }
+  .mode-hybrid { background: #ECFDF5; color: #047857; }
+  .mode-inperson { background: #FEF2F2; color: #B91C1C; }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--navy-dark);
+    margin-bottom: 3px;
+    line-height: 1.25;
+  }
+  .card-subtitle {
+    font-size: 11px;
+    color: var(--slate);
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+  .folder-tag {
+    font-size: 10px;
+    font-family: monospace;
+    background: var(--slate-light);
+    color: #64748B;
+    padding: 3px 6px;
+    border-radius: 4px;
+    border: 1px dashed var(--border);
+    margin-bottom: 12px;
+    display: inline-block;
+    word-break: break-all;
+  }
+
+  /* Details Table/List */
+  .card-details {
+    list-style: none;
+    border-top: 1px solid var(--border);
+    padding-top: 8px;
+    margin-bottom: 14px;
+  }
+  .card-details li {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    font-size: 11.5px;
+    border-bottom: 1px dashed #F8FAFC;
+  }
+  .card-details .lbl {
+    color: var(--slate);
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+  .card-details .val {
+    font-weight: 600;
+    text-align: right;
+    color: var(--navy-dark);
+  }
+  .val.urgent { color: var(--rose); font-weight: 800; }
+  .val.amber { color: var(--amber); font-weight: 700; }
+  .val.teal { color: var(--teal); font-weight: 700; }
+
+  /* Card Footer */
+  .card-footer {
+    background: var(--slate-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+  }
+  .qr-code-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    padding: 2px;
+    flex-shrink: 0;
+  }
+  .footer-action {
+    flex-grow: 1;
+  }
+  .btn-visit {
+    display: block;
+    background: var(--navy);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 7px 10px;
+    border-radius: 6px;
+    text-align: center;
+    transition: background 0.15s ease;
+  }
+  .btn-visit:hover {
+    background: var(--navy-dark);
+  }
+  .qr-hint {
+    font-size: 9px;
+    color: var(--slate);
+    text-align: center;
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header class="app-header">
+    <div>
+      <h1>2027 TARGET CONFERENCES · MASTER GALLERY</h1>
+      <p>All 11 Target Venues in Workspace Ranked Chronologically · Submission Deadlines, Verified Fees & Formats</p>
+    </div>
+    <div class="header-actions">
+      <span class="badge-count">11 Venues Covered</span>
+      <a class="btn-download" href="conference_master_dossier.pdf" target="_blank">📄 Open Multi-Page PDF</a>
+      <a class="btn-download" href="Target_Conferences_2027_Master_Gallery.pptx" download>📊 Download PPTX</a>
+    </div>
+  </header>
+
+  <!-- Filter & View Controls -->
+  <div class="controls-bar">
+    <div class="filter-group">
+      <button class="filter-btn active" data-filter="all">All (11)</button>
+      <button class="filter-btn" data-filter="hybrid">🌐 Hybrid / Online Available (6)</button>
+      <button class="filter-btn" data-filter="inperson">🏛️ In-Person Only (5)</button>
+      <button class="filter-btn" data-filter="urgent">🔥 Urgent (Nov–Dec 2026)</button>
+      <button class="filter-btn" data-filter="future">📅 2027 Deadlines</button>
+    </div>
+    <div class="view-toggle">
+      <button class="view-btn active" id="btn-view-grid" onclick="setViewMode('grid')">📱 Grid View</button>
+      <button class="view-btn" id="btn-view-carousel" onclick="setViewMode('carousel')">🔄 Swipeable Carousel</button>
+    </div>
+  </div>
+
+  <!-- Horizontal Timeline Ribbon -->
+  <div class="timeline-ribbon" id="timelineRibbon">
+
+    <div class="ribbon-item" onclick="jumpToConference(0)">
+      <div class="ribbon-dot" style="background:#E11D48;"></div>
+      <span>#1 ARC 2027 (27 Nov)</span>
+    </div>
+    <div class="ribbon-arrow">→</div>
+
+    <div class="ribbon-item" onclick="jumpToConference(1)">
+      <div class="ribbon-dot" style="background:#E11D48;"></div>
+      <span>#2 COLING 2027 (Industry) (30 Nov)</span>
+    </div>
+    <div class="ribbon-arrow">→</div>
+
+    <div class="ribbon-item" onclick="jumpToConference(2)">
+      <div class="ribbon-dot" style="background:#E11D48;"></div>
+      <span>#3 EMBEC 2027 (01 Dec)</span>
+    </div>
+    <div class="ribbon-arrow">→</div>
+
+    <div class="ribbon-item" onclick="jumpToConference(3)">
+      <div class="ribbon-dot" style="background:#E11D48;"></div>
+      <span>#4 ICCIDA-2027 (10 Dec)</span>
+    </div>
+    <div class="ribbon-arrow">→</div>
+
+    <div class="ribbon-item" onclick="jumpToConference(4)">
+      <div class="ribbon-dot" style="background:#D97706;"></div>
+      <span>#5 ICFEC 2027 (20 Dec)</span>
+    </div>
+    <div class="ribbon-arrow">→</div>
+
+    <div class="ribbon-item" onclick="jumpToConference(5)">
+      <div class="ribbon-dot" style="background:#D97706;"></div>
+      <span>#6 SADASC'27 (31 Dec)</span>
+    </div>
+    <div class="ribbon-arrow">→</div>
+
+    <div class="ribbon-item" onclick="jumpToConference(6)">
+      <div class="ribbon-dot" style="background:#D97706;"></div>
+      <span>#7 IEEE IC3ECSBHI-2027 (31 Dec)</span>
+    </div>
+    <div class="ribbon-arrow">→</div>
+
+    <div class="ribbon-item" onclick="jumpToConference(7)">
+      <div class="ribbon-dot" style="background:#D97706;"></div>
+      <span>#8 AbjadNLP 2027 (@ COLING) (05 Jan)</span>
+    </div>
+    <div class="ribbon-arrow">→</div>
+
+    <div class="ribbon-item" onclick="jumpToConference(8)">
+      <div class="ribbon-dot" style="background:#0D9488;"></div>
+      <span>#9 ICEDEG 2027 (28 Feb)</span>
+    </div>
+    <div class="ribbon-arrow">→</div>
+
+    <div class="ribbon-item" onclick="jumpToConference(9)">
+      <div class="ribbon-dot" style="background:#0D9488;"></div>
+      <span>#10 IEEE FACT-2027 (30 Mar)</span>
+    </div>
+    <div class="ribbon-arrow">→</div>
+
+    <div class="ribbon-item" onclick="jumpToConference(10)">
+      <div class="ribbon-dot" style="background:#0D9488;"></div>
+      <span>#11 ICCR (Rolling /)</span>
+    </div>
+
+  </div>
+
+  <!-- Carousel Mode Wrapper -->
+  <div class="carousel-wrapper" id="carouselWrapper" style="display: none;">
+    <button class="carousel-nav-btn btn-prev" onclick="scrollCarousel(-1)">◀</button>
+    <div class="carousel-viewport" id="carouselViewport">
+
+      <div class="carousel-slide conf-item" data-index="0" data-mode="in-person" data-period="urgent">
+        <div class="conf-card urgent-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-rose">#1 · 13 Days Left · URGENT</span>
+              <span class="mode-pill mode-inperson">🏛️ In-Person</span>
+            </div>
+            <div class="card-title">ARC 2027</div>
+            <div class="card-subtitle">23rd Int. Symposium on Applied Reconfigurable Computing</div>
+            <div class="folder-tag">📁 International Symposium on Applied Reconfigurable Computing</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val urgent">27 Nov 2026</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">21 Dec 2026</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">18 Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">Late Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">31 Mar – 02 Apr 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Humboldt-Universität zu Berlin, Germany</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val urgent">In-Person Only</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">€500–€550 (Reg) · €400–€450 (Student)</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">Up to 12 pages (Full) / 6–8p (Short)</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">Springer LNCS format</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">Springer LNCS, Scopus, DBLP, ACM TRETS</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAAEoAQAAAADDfFG0AAACKUlEQVR4nO1a227DMAgF1P//ZSY4gJtFVftQ2UyDtF1i84COuRzIWOkDkU+UaLRSBomUBxHjTu3OvI2VSVlZ187glfIAUgRsABeRsn21dgavEgUqar/41FLt6OCVckGCHSXEYUXjTeul/Jd4TLGkFWHJHpbtrZczeOl69gxmYLEnf+1tvRzBi58XrDB6cbScz82tl+1aj4t3cf0FZOfskqZarM63KLmERWFyr7Xe1Xo5o6V+cdVFu5JMDP+6iHuSpo+5uHfZTzlc79PerqXgXevLy9/QInW2/r18U4sMH0pqX8Q+trA0/H6JhV1QU8RlhmCwfaS0rqct27XInUmjT4wlXElXx7+eRLLV1vCwAA/FkqPn7nrackKLnckX1yL2iU7EJ/ruxtYf4PdsN0EgkM6q645c1tV62a5FEXHkeaqqZH4QqjP/us1z1AcS4VrgXlEkbbHracshLQVOwApZK+eFHq29rd+txTYm9Lh0cJDjvQYkp+hs/Xv59vxLnT7EfALEIlIaOEVf6+WYFoPJYzbh9IIxYvXn7tbvro+6Rs9eJLOTxOPUx1/zVc2OqLJ+NuARp11PW06+31ZL+jGJznbIN/paL9u12GcSFO85cqAaK47l8K8bX+WFEygYVqJPanzacvR9LdXMC0PWePUx9fEVXoq+KPK+AwfX63racvL9tkYQxvzrqSdqa71s16IcqtIa32NSETRj5vcXufxbyZ87bRmtkK5I/AARBB75u196GwAAAABJRU5ErkJggg==" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="https://ce.informatik.hu-berlin.de/arc2027/" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide conf-item" data-index="1" data-mode="hybrid" data-period="urgent">
+        <div class="conf-card urgent-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-rose">#2 · 16 Days Left · URGENT</span>
+              <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+            </div>
+            <div class="card-title">COLING 2027 (Industry)</div>
+            <div class="card-subtitle">31st Int. Conference on Computational Linguistics (Industry Track)</div>
+            <div class="folder-tag">📁 Paper_A_COLING2027</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val urgent">30 Nov 2026</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">15 Mar 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">01 Apr 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">01 Apr 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">09–14 May 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Macau, China</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val teal">Hybrid (Virtual & In-Person)</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">~$450–$650 USD (Virtual / In-Person tiers)</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">Up to 8 pages + unlimited references</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">Official ACL LaTeX style (acl.sty)</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">ACL Anthology, Scopus, Google Scholar, DBLP</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABNUlEQVR4nO1Ywa7DMAizo/3/L/sJCLSnXrJKPDSkrQEudiABQuFB1pMTP2//3fgAjJV8JepmGckXntJ0VYQRTstMvrC4whnT45uWppjXl7wKwuyF6kWv/E/NUH0/n7UVwqKryzKTL0uTnV+qLCP5qhQF5cvSE/M68FJ2RdVtBV+VPpMvkqRcD6v/emJeB17I0tdTWJnRuZJ6Yl5nXmUbiYus70JjzCfxVUYZdVEl656Y15mXshCLRtx4S1GUBp9f5IyA2ymeGt8QVXz3Va3J/SSzEPuQZDanP7L+pjB7SZ8NhanxZawU3eQe+SOne2Jeh16ZYM/7ZozuamQ+oyqv9qW8zXPr712UH3ZC9ZJXYJzdaqc7oHqlHpnIryh/vtrPdZPnQVQtqtcNza6//wbz+nlv8rwbf/PEo3641nBWAAAAAElFTkSuQmCC" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="https://coling2027.org/" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide conf-item" data-index="2" data-mode="in-person" data-period="urgent">
+        <div class="conf-card urgent-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-rose">#3 · 17 Days Left · URGENT</span>
+              <span class="mode-pill mode-inperson">🏛️ In-Person</span>
+            </div>
+            <div class="card-title">EMBEC 2027</div>
+            <div class="card-subtitle">European Medical and Biological Engineering Conference</div>
+            <div class="folder-tag">📁 EMBEC 2027</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val urgent">01 Dec 2026</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">15 Feb 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">31 Mar 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">31 Mar 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">14–18 Jun 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Ischia (Naples), Italy</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val urgent">In-Person Only</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">Est. €550–€600 (Member) · €350–€400 (Student)</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">4 to 6 pages (Full Paper)</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">Springer IFMBE Proceedings (LaTeX & Word)</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">Springer IFMBE, Scopus, PubMed, Web of Science</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABRElEQVR4nO1Yyw4DIQhkyP7/L0/DQ2sve9FNKamx1krSzCww4IJyM/TOKH9r/achHA5m/LA5TTUx64b1SqYCEfqHy0lPvmI8JYbTnSc1MesZK0HAmJZC9ZwV5tOZzif/uVo807fMYJ4J3JUvYotQKVMslMasG1Ys8QtfQ6E7118mQY78zRrcsf7qUCpOr9IOoiAVxrzTXzEnh3fD0Z39KyZSENC+jTVQG/NWPwkaSdcrW+D527Kf1KAIIUyXXZyjINmuLubd/JXZdORsqs/XUnGZgeydtN+WmtZfGf0jP/zc1L9MwrDr0dh/F5U+Zr0mN74D25XL1q71SN6XBlkP2r/fgKlU3hvKYtbDVnqRsmSuhOqgf2PQq9HsN+pi1l0r43LEGdvRQpfGvOFfxBZZfmHhHD6uiVkPvd/4Fcz6ty7j/mm8AJnDlJUugHxmAAAAAElFTkSuQmCC" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="https://www.embec2027.eu/" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide conf-item" data-index="3" data-mode="hybrid" data-period="urgent">
+        <div class="conf-card urgent-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-rose">#4 · 26 Days Left · URGENT</span>
+              <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+            </div>
+            <div class="card-title">ICCIDA-2027</div>
+            <div class="card-subtitle">5th Int. Conference on Computing, IoT and Data Analytics</div>
+            <div class="folder-tag">📁 5th International Conference on Computing, IoT and Data Analytics</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val urgent">10 Dec 2026</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">30 Dec 2026</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">15 Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">08 Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">18–19 Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Birmingham City University, UK</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val teal">Online Available (Official Online Track)</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">Online: £300 (Reg) / £200 (Student) · On-site: £400/£300</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">Standard 6–8 pages</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">IET 2-column LaTeX (iet-latex-template-3.zip)</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">IET Digital Library, Inspec, Scopus</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABOElEQVR4nO1Y7Y7DMAjDaO//yj6BSTbdj+qkrDqGxr5crEm4IQQK2oX5FWlftv/deJhBiGZYn+UZqdcypWEwLsXlGarXIM0MxbLy9IzZ38SChljmXlHdxpKRzWSvqO7IZwqDUL3anpl6IQjmK+E/R+W3seAviF2z2sbsZywSwKJY6RhOjM4xH+YzkcWqinOAv/zXP5SltBpWdkdOp6dvzCf7F7uvQjYdqTV9Q+sVAlG/oVM1a6peaHmX7aGBXWP2A9aY00F0VazLAoF7xuzHLKHNmyo1IOWSd475kIUWWgdxquX0/sqqQNfmndpvQIg6hV46y+HPN0wTf436Q+vzI75KIqRY0mNWahqzv4nleuchNXdeeBrqONYMMf75hqmbfBauqfNgGmpM2gPE8PP3Y2L2L/ti13fjB9JJfs4F1NhPAAAAAElFTkSuQmCC" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="https://iccida.com/" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide conf-item" data-index="4" data-mode="in-person" data-period="urgent">
+        <div class="conf-card amber-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-amber">#5 · 1.2 Months Left</span>
+              <span class="mode-pill mode-inperson">🏛️ In-Person</span>
+            </div>
+            <div class="card-title">ICFEC 2027</div>
+            <div class="card-subtitle">11th IEEE Int. Conference on Fog and Edge Computing</div>
+            <div class="folder-tag">📁 1th IEEE International Conference on Fog and Edge Computing</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val amber">20 Dec 2026</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">20 Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">16 Mar 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">16 Mar 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">24–27 May 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Dallas-Fort Worth, Texas, USA</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val urgent">In-Person (Co-located with IEEE CCGrid)</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">~$800–$950 (Mem) · ~$1,050–$1,200 (Non-Mem) · $500–$650 (Student)</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">Up to 8 pages (Regular) / 4 pages (Short)</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">IEEE 2-column format (Letter)</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">IEEE CPS, IEEE Xplore, Scopus, EI Compendex</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAEIAQAAAACLjVdSAAABnklEQVR4nO1ay27DMAwTjf3/L3MQaTm59TRBmJsUqeIIKMFSD6sF48OxPjnE1+P/8vETAVsMUCaRmjmr1/ERChmIAaaRF9bqGKSrzwM4aogUiSip1VFIez2QBIgQ/OGnjI+XfRCsrDER6erjg+eW0Mt2J441xCNYZGQGfZ/1eArS1eKBRxuwPGxyHNLV5YHDBpMRFd582wVmENIeD1oQSUBUCwISWzqDkLbpA6kHVhuWF90qtwxC2lNf+HSmceJGHPFOfSANxUhUa6rwMUWDkHblD4oAqr6UXhxHs5D21Fu4CXuIqLprrUxBuho9qJwBL5H79sZ4QcVKNWbwTkbnhfrAri5PnwqtKJ8qp05Buvo86L0+8vT0IyOGKjizkLZ4MA2efZxjJ+uvHk1C2rO/5RZEpCiSnB07Mq/f38Lp9Gxyr8yn8Z6vh0uOO9QL52N8TT/wjId2IpmCdPV5YG9hqGvUkhv2UUibPbjJcGo1QTORdngwM6hEkYGjCRlvnq/Dgtg/V1Yjfx8fsAlvcj0/NRv39WP4/t9h5Peyhnj8AuRrufsxuGWrAAAAAElFTkSuQmCC" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="https://fcrlab.unime.it/icfec2027" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide conf-item" data-index="5" data-mode="hybrid" data-period="urgent">
+        <div class="conf-card amber-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-amber">#6 · 1.5 Months Left</span>
+              <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+            </div>
+            <div class="card-title">SADASC'27</div>
+            <div class="card-subtitle">7th Int. Conf. on Smart Applications & Cyber-Physical Systems</div>
+            <div class="folder-tag">📁 The International Conference on Smart Applications and Data Analysis...</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val amber">31 Dec 2026</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">15 Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">24 Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">15 Mar 2027 (Early cutoff)</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">10–11 Jun 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Córdoba, Andalusia, Spain</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val teal">Hybrid / Online Track Supported</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">Online: €180 (Reg) / €140 (Student) · On-site: €250/€200</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">12–15+ pages (Long) / 6–8p (Short)</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">Springer CCIS single-column format</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">Springer CCIS, Scopus, DBLP, Web of Science</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABQklEQVR4nO1Yy47EMAjDaP7/l73CkM1oD71kqrJoIjVC4WKXR0xAu1h+5bSvt//feJkhLcoi+HYykq8ppWEwiii4TobytYirVWxz1clQvrXA4FnJ3Bizf8ZLUSV7obojvkybUcGZ05zMF2kiOnO1rIdR+W1e8I+JFdsnUfmdXshAbRHk6Fqx9cV8Fl+IJYv1EhzsitkPvYieDEZcM5eTNabmM8UZJTpEm1P1husakppEKeii/TCq++oXuoP426C5v56Y/cBrjHguwWFbXsnuidlPvcyKtepXKl4FuzHmIy9zCmSeRT1nw+qM+VxfmVpXTvyc/75Bq2FhN66Z8wJ3EiNDrANOf9+wqOE18SPyuidm/5SXS2rEJTVzXvA3m6WgJaeH3kev2PY9ROnKld/T3zewG1a26NH377/B7F/v27r+Gz/OFHrL6GZtewAAAABJRU5ErkJggg==" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="https://sadasc.com/" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide conf-item" data-index="6" data-mode="hybrid" data-period="urgent">
+        <div class="conf-card amber-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-amber">#7 · 1.5 Months Left</span>
+              <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+            </div>
+            <div class="card-title">IEEE IC3ECSBHI-2027</div>
+            <div class="card-subtitle">3rd IEEE Int. Conf. on Cognitive Computing in Eng., Comms., Sciences & Biomedical Health</div>
+            <div class="folder-tag">📁 IEEE IC3ECSBHI-2027 (Delhi-NCR)</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val amber">31 Dec 2026</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">15 Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">31 Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">31 Jan 2027 (Cutoff 10 Mar)</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">09–11 Apr 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Greater Noida, Delhi-NCR, India</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val teal">Physical (Online with Prior Approval)</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">$350–$450 USD (Foreign) · ₹7,000–₹11,000 INR</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">Up to 6 pages (Max 8 with fee)</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">IEEE Conference 2-column format (A4)</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">IEEE Xplore (Record #73802), Scopus</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAEIAQAAAACLjVdSAAABlElEQVR4nO1Zy47DMAhkrP7/L8+KATvJXnpaRJc6TexQpKIRr6GgvVnrnYJ9Nf4vHkb+OtD4kHaxdJVovISAmcFAmBGg+WFLbR4e5jg4FOb3SSghbWPpKtfgxgJsbmmJBhwGeuAY8Ge/8gnxQh0pFDyBBBocXl/see2vu1i6SjRwSxVIx7h8o86O1UcDeZmDIyA8iai+oJelRf4B+UMmDfCIoM/AfgzuELpVY3z5FuEz0D+Y7oAdKoIj3GMeHkgHsVuTHklE3WoXS1eVBg9doVoQUDV4CxtZWlVfjN6RMlzlQmJqfbHccOd0yh7z8sfa6UIOwii8yiYYyffXzqGKFih2ks6k1zSytKb/QHReESgROJ5QA6GJ/oFIGQy+f6u3em1kaVH/wd2c2kHhNGV9LF3V/BZqy656k/3qwP5U68wKI3z2PpHP2Wb3zDH7GSuPyx/LH9CkEMFyY7koeH8rS0v8Ixch+hIsX1gM5PvrOsIf139zHjkcPV+3O4uJIQAnz9dNb9mUpWjyfL23peur8Vg1ePwA14++64gBVScAAAAASUVORK5CYII=" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="https://www.ic3ecsbhi.com/index.html" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide conf-item" data-index="7" data-mode="hybrid" data-period="future">
+        <div class="conf-card amber-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-amber">#8 · 1.7 Months Left</span>
+              <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+            </div>
+            <div class="card-title">AbjadNLP 2027 (@ COLING)</div>
+            <div class="card-subtitle">3rd Workshop on NLP for Languages Using Arabic Script</div>
+            <div class="folder-tag">📁 AbjadNLP</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val amber">05 Jan 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">06 Feb 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">05 Mar 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">15 Apr 2027 (Video deadline)</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">09–14 May 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Macau, China (Co-located with COLING)</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val teal">Hybrid / Pre-recorded Video Supported</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">~$200–$350 USD (Virtual Workshop) · ~$450–$650 (In-pers.)</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">8 pages (Long) / 4 pages (Short) + unlim. refs</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">Official ACL / COLING LaTeX style</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">ACL Anthology, Scopus, Google Scholar, DBLP</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABPElEQVR4nO1YyxKDMAhkM/7/L2+HJfi4eFFHyphqS+CyGx6BgnayxpnRPmv901jMEBJBydw0PfmaQhpGf530qmnK1w5etU3TlW8siqf7uTjmcZcVII0ohup+/1IiSGDu2JkvcgOCMHjhehfVeMyKY7+BWaBfRjWetELuxHoNh8elLYv5mpVeqUxSMvXALo35ghXYuitf3nZEoNfFfMFKuocJp638jb3/lMV8LX+JSF+mVk1Hy/xdlLPuVcwn7yL0nY+oNhIR2HFHSdn1/sUMZESBlotpjf1rCmLOkTDo+iH0zF/L2chXxPS8oZr6dyUKT+Fdk9n9/w1GfV5JN50HkXUZ0s3AbhnP47Cjf/RER10D1UNWaE6I7zkEF0D1RDzTckqyTF+1z035IkSIsqTsLpv2V3+GeXzW3To/jR9E8HPwE7wB8wAAAABJRU5ErkJggg==" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="https://abjadnlp.com/" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide conf-item" data-index="8" data-mode="in-person" data-period="future">
+        <div class="conf-card teal-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-teal">#9 · 3.5 Months Left</span>
+              <span class="mode-pill mode-inperson">🏛️ In-Person</span>
+            </div>
+            <div class="card-title">ICEDEG 2027</div>
+            <div class="card-subtitle">13th Int. Conference on eDemocracy & eGovernment</div>
+            <div class="folder-tag">📁 edem-egov</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val amber">28 Feb 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">21 Apr 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">15 May 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">15 May 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">07–09 Jul 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Universitat Rovira i Virgili, Tarragona, Spain</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val urgent">In-Person Only (Strict Attendance Policy)</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">650 CHF (~€690 / $730) Reg · 550 CHF (~€585 / $620) Student</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">6 to 8 pages (Long) / 4 to 6 pages (Short)</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">IEEE 2-column format (Double-blind)</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">IEEE Xplore, Scopus, EI Compendex</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABPklEQVR4nO1Yyw7CQAicIf7/L4/hsU299GCtReKaGApJwxQYYCkcHDsy4m/t/zUeAFMSAMoftGlG4kWkNEFIDlibZiheMBBqRXrTNPXZPmZVJHU3ry6y0lO6AvvZN3fLZ70QFlcBT8XLFClHGuzM1j7bCSv1KhOJ+l6v7Eor64ek5SWws88n48sMKl12wKVs6rOdsEJa5CTI+1H0pNBJQ+PLxc1yKZ/CMrR+ITK6b4U6q3fkPGnFUJ7W+4Fy8DzJnJ1FbqXrXWkuP7PYWWsfLBlj+VkhIVl56TWWn/PQ/4qePaGn7vtMSdGOVmbf65V9434D8qDWDce9Xtk37jcYq8JuOxqLN4+qgAN65vTs+w1FeLMj5fDRwKsrrIpBQ1W6ATmZq7HP7/cjpqTYFTKZq5yH32/8is/2t+7O8dd4ApUjhMHTFOEeAAAAAElFTkSuQmCC" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="https://edem-egov.org/" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide conf-item" data-index="9" data-mode="hybrid" data-period="future">
+        <div class="conf-card teal-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-teal">#10 · 4.5 Months Left · Relaxed</span>
+              <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+            </div>
+            <div class="card-title">IEEE FACT-2027</div>
+            <div class="card-subtitle">2027 IEEE Int. Conf. on Futuristic AI Concepts & Techniques</div>
+            <div class="folder-tag">📁 IEEE FACT-2027 (Bhopal)</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val amber">30 Mar 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">30 Apr 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">10 May 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">15 May 2027 (Early-bird)</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">25–26 Jun 2027</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Bhopal, Madhya Pradesh, India</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val teal">Native Hybrid (On-site + Online)</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">$180–$200 USD (Foreign) · ₹6,000–₹8,500 INR</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">Up to 8 full pages in IEEE format</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">IEEE Conference 2-column format (A4)</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">IEEE CPS, IEEE Xplore, Scopus</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAEIAQAAAACLjVdSAAABmElEQVR4nO1Y0W4CMQyLK/7/lz3FTq/cXnjZSrdwQOn1IhGi2HECxotrvDKIj8X/jccjAt4xkLkC6oDXabt4hCCDikguyGjM037xiPnv80KmhjPFp6d4OrZbQHBhBgPv9OPt+VEXEymiDkbreFBbUCTqT8blLE/HFovgzIWk0ufXfHyKp2OLBZ6gAQFG1MHzPB27LJBvwPUkGYSkb0/zdB9eKMLgBIpvddAPLyhFGrq3NC39kd8d6y2TO6JK7RJj6IsX1o4XWCaG+tUXVNMSU5feFFm/+kKXmCjKEK3qCGjXzw2tRgsUDdXe2eK249Oh1ckQyhTBRo0/D/R0kz6FqwkNGzNJMgrYUp/GjAZu8l2PDvJ0jwXzO0kU2ppIBJif/JU/YhHfRTpXq69OpqH+eJYiVJJ4cYlpp9fhnadBYhIVXU3K2tXbx5qvo8Zj1wTEJaZhPwcrMtz7uSKSUzwduy2gJKk00YGGQgd6useCBRIJ9jVXPdDT38YLvaeJY9GqoNNy/hErKLF6fQmQtvrjcE/Hx+J27YnHF3eRzM8gGEgBAAAAAElFTkSuQmCC" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="https://fact2027.acors.org/" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-slide conf-item" data-index="10" data-mode="hybrid" data-period="urgent">
+        <div class="conf-card teal-card">
+          <div>
+            <div class="card-top">
+              <span class="card-rank badge-teal">#11 · Annual Cycle (Conf: Dec 11–13)</span>
+              <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+            </div>
+            <div class="card-title">ICCR</div>
+            <div class="card-subtitle">International Conference on Control and Robotics</div>
+            <div class="folder-tag">📁 ICCR - Call for Papers</div>
+            
+            <ul class="card-details">
+              <li>
+                <span class="lbl">Paper Submission</span>
+                <span class="val amber">Rolling / Autumn Cycle</span>
+              </li>
+              <li>
+                <span class="lbl">Notification</span>
+                <span class="val">~1 month post-submission</span>
+              </li>
+              <li>
+                <span class="lbl">Camera-Ready</span>
+                <span class="val">01 Nov (Early Reg)</span>
+              </li>
+              <li>
+                <span class="lbl">Registration Due</span>
+                <span class="val">01 Nov</span>
+              </li>
+              <li>
+                <span class="lbl">Conference Dates</span>
+                <span class="val" style="color:var(--navy);">11–13 Dec (Annual)</span>
+              </li>
+              <li>
+                <span class="lbl">Location</span>
+                <span class="val">Hosei University, Tokyo, Japan</span>
+              </li>
+              <li>
+                <span class="lbl">Attendance Mode</span>
+                <span class="val teal">Hybrid / Online Oral Presentation Supported</span>
+              </li>
+              <li>
+                <span class="lbl">Author Fee</span>
+                <span class="val">$560–$620 USD (Reg) · $500–$580 (Student) · $400–$450 (Presenter)</span>
+              </li>
+              <li>
+                <span class="lbl">Page Budget</span>
+                <span class="val">Standard 6 pages included in IEEE format</span>
+              </li>
+              <li>
+                <span class="lbl">Template</span>
+                <span class="val" style="font-size:10.5px;">IEEE Conference 2-column format</span>
+              </li>
+              <li>
+                <span class="lbl">Indexing</span>
+                <span class="val" style="font-size:10px;">IEEE Xplore, EI Compendex, Scopus</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="card-footer">
+            <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABPklEQVR4nO1ZQQ7CMAyzK/7/ZaM46bQTBzqkKKJII2suMXE8d1D4sNanJP7Z/r/GC2BGciCAunZG4oUpzcQKxtfemYkXhVWJlcZtzEPx1mJyW91rXo9lpextr6oe76/qRkHooPPemYmXFcvKHPNLDMar60YlU+pd8zrIMgjsdqpudsNn6vOKi/wBQCOlQrjYu+Yvs1BosuHKwWazN3rWvA6zTHtBMrTK9qqg9635YH6xFVo1vKnSM/3z8tCavMgBzv5mo9vWfJSVnSRzdml2c/R5AcljBvBSq2T1VLwss4G6xjM5CD5Vr7y4j72Tz4O8zLJu5+DtuIbqVSy4sddLndTrvjUfzS9vRwRZn+uR3LPm9VSWCo/lUH2q+lmW9hgsHz2Yz3KoMpP5vk4Yi5cZchvJyfPL//8pt9WzRyfZN3aDiLpn7HYbAAAAAElFTkSuQmCC" alt="QR Code">
+            <div class="footer-action">
+              <a class="btn-visit" href="http://www.iccr.net/" target="_blank">Visit Website / CFP ↗</a>
+              <div class="qr-hint">Scan QR on phone or click to open</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-nav-btn btn-next" onclick="scrollCarousel(1)">▶</button>
+    <div class="carousel-indicators" id="carouselIndicators"></div>
+  </div>
+
+  <!-- Grid Mode Wrapper -->
+  <div class="grid-container" id="gridContainer">
+
+    <div class="conf-item" data-index="0" data-mode="in-person" data-period="urgent">
+      <div class="conf-card urgent-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-rose">#1 · 13 Days Left · URGENT</span>
+            <span class="mode-pill mode-inperson">🏛️ In-Person</span>
+          </div>
+          <div class="card-title">ARC 2027</div>
+          <div class="card-subtitle">23rd Int. Symposium on Applied Reconfigurable Computing</div>
+          <div class="folder-tag">📁 International Symposium on Applied Reconfigurable Computing</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val urgent">27 Nov 2026</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">21 Dec 2026</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">18 Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">Late Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">31 Mar – 02 Apr 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Humboldt-Universität zu Berlin, Germany</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val urgent">In-Person Only</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">€500–€550 (Reg) · €400–€450 (Student)</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">Up to 12 pages (Full) / 6–8p (Short)</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">Springer LNCS format</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">Springer LNCS, Scopus, DBLP, ACM TRETS</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAAEoAQAAAADDfFG0AAACKUlEQVR4nO1a227DMAgF1P//ZSY4gJtFVftQ2UyDtF1i84COuRzIWOkDkU+UaLRSBomUBxHjTu3OvI2VSVlZ187glfIAUgRsABeRsn21dgavEgUqar/41FLt6OCVckGCHSXEYUXjTeul/Jd4TLGkFWHJHpbtrZczeOl69gxmYLEnf+1tvRzBi58XrDB6cbScz82tl+1aj4t3cf0FZOfskqZarM63KLmERWFyr7Xe1Xo5o6V+cdVFu5JMDP+6iHuSpo+5uHfZTzlc79PerqXgXevLy9/QInW2/r18U4sMH0pqX8Q+trA0/H6JhV1QU8RlhmCwfaS0rqct27XInUmjT4wlXElXx7+eRLLV1vCwAA/FkqPn7nrackKLnckX1yL2iU7EJ/ruxtYf4PdsN0EgkM6q645c1tV62a5FEXHkeaqqZH4QqjP/us1z1AcS4VrgXlEkbbHracshLQVOwApZK+eFHq29rd+txTYm9Lh0cJDjvQYkp+hs/Xv59vxLnT7EfALEIlIaOEVf6+WYFoPJYzbh9IIxYvXn7tbvro+6Rs9eJLOTxOPUx1/zVc2OqLJ+NuARp11PW06+31ZL+jGJznbIN/paL9u12GcSFO85cqAaK47l8K8bX+WFEygYVqJPanzacvR9LdXMC0PWePUx9fEVXoq+KPK+AwfX63racvL9tkYQxvzrqSdqa71s16IcqtIa32NSETRj5vcXufxbyZ87bRmtkK5I/AARBB75u196GwAAAABJRU5ErkJggg==" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="https://ce.informatik.hu-berlin.de/arc2027/" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-item" data-index="1" data-mode="hybrid" data-period="urgent">
+      <div class="conf-card urgent-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-rose">#2 · 16 Days Left · URGENT</span>
+            <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+          </div>
+          <div class="card-title">COLING 2027 (Industry)</div>
+          <div class="card-subtitle">31st Int. Conference on Computational Linguistics (Industry Track)</div>
+          <div class="folder-tag">📁 Paper_A_COLING2027</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val urgent">30 Nov 2026</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">15 Mar 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">01 Apr 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">01 Apr 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">09–14 May 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Macau, China</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val teal">Hybrid (Virtual & In-Person)</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">~$450–$650 USD (Virtual / In-Person tiers)</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">Up to 8 pages + unlimited references</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">Official ACL LaTeX style (acl.sty)</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">ACL Anthology, Scopus, Google Scholar, DBLP</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABNUlEQVR4nO1Ywa7DMAizo/3/L/sJCLSnXrJKPDSkrQEudiABQuFB1pMTP2//3fgAjJV8JepmGckXntJ0VYQRTstMvrC4whnT45uWppjXl7wKwuyF6kWv/E/NUH0/n7UVwqKryzKTL0uTnV+qLCP5qhQF5cvSE/M68FJ2RdVtBV+VPpMvkqRcD6v/emJeB17I0tdTWJnRuZJ6Yl5nXmUbiYus70JjzCfxVUYZdVEl656Y15mXshCLRtx4S1GUBp9f5IyA2ymeGt8QVXz3Va3J/SSzEPuQZDanP7L+pjB7SZ8NhanxZawU3eQe+SOne2Jeh16ZYM/7ZozuamQ+oyqv9qW8zXPr712UH3ZC9ZJXYJzdaqc7oHqlHpnIryh/vtrPdZPnQVQtqtcNza6//wbz+nlv8rwbf/PEo3641nBWAAAAAElFTkSuQmCC" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="https://coling2027.org/" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-item" data-index="2" data-mode="in-person" data-period="urgent">
+      <div class="conf-card urgent-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-rose">#3 · 17 Days Left · URGENT</span>
+            <span class="mode-pill mode-inperson">🏛️ In-Person</span>
+          </div>
+          <div class="card-title">EMBEC 2027</div>
+          <div class="card-subtitle">European Medical and Biological Engineering Conference</div>
+          <div class="folder-tag">📁 EMBEC 2027</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val urgent">01 Dec 2026</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">15 Feb 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">31 Mar 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">31 Mar 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">14–18 Jun 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Ischia (Naples), Italy</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val urgent">In-Person Only</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">Est. €550–€600 (Member) · €350–€400 (Student)</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">4 to 6 pages (Full Paper)</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">Springer IFMBE Proceedings (LaTeX & Word)</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">Springer IFMBE, Scopus, PubMed, Web of Science</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABRElEQVR4nO1Yyw4DIQhkyP7/L0/DQ2sve9FNKamx1krSzCww4IJyM/TOKH9r/achHA5m/LA5TTUx64b1SqYCEfqHy0lPvmI8JYbTnSc1MesZK0HAmJZC9ZwV5tOZzif/uVo807fMYJ4J3JUvYotQKVMslMasG1Ys8QtfQ6E7118mQY78zRrcsf7qUCpOr9IOoiAVxrzTXzEnh3fD0Z39KyZSENC+jTVQG/NWPwkaSdcrW+D527Kf1KAIIUyXXZyjINmuLubd/JXZdORsqs/XUnGZgeydtN+WmtZfGf0jP/zc1L9MwrDr0dh/F5U+Zr0mN74D25XL1q71SN6XBlkP2r/fgKlU3hvKYtbDVnqRsmSuhOqgf2PQq9HsN+pi1l0r43LEGdvRQpfGvOFfxBZZfmHhHD6uiVkPvd/4Fcz6ty7j/mm8AJnDlJUugHxmAAAAAElFTkSuQmCC" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="https://www.embec2027.eu/" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-item" data-index="3" data-mode="hybrid" data-period="urgent">
+      <div class="conf-card urgent-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-rose">#4 · 26 Days Left · URGENT</span>
+            <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+          </div>
+          <div class="card-title">ICCIDA-2027</div>
+          <div class="card-subtitle">5th Int. Conference on Computing, IoT and Data Analytics</div>
+          <div class="folder-tag">📁 5th International Conference on Computing, IoT and Data Analytics</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val urgent">10 Dec 2026</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">30 Dec 2026</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">15 Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">08 Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">18–19 Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Birmingham City University, UK</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val teal">Online Available (Official Online Track)</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">Online: £300 (Reg) / £200 (Student) · On-site: £400/£300</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">Standard 6–8 pages</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">IET 2-column LaTeX (iet-latex-template-3.zip)</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">IET Digital Library, Inspec, Scopus</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABOElEQVR4nO1Y7Y7DMAjDaO//yj6BSTbdj+qkrDqGxr5crEm4IQQK2oX5FWlftv/deJhBiGZYn+UZqdcypWEwLsXlGarXIM0MxbLy9IzZ38SChljmXlHdxpKRzWSvqO7IZwqDUL3anpl6IQjmK+E/R+W3seAviF2z2sbsZywSwKJY6RhOjM4xH+YzkcWqinOAv/zXP5SltBpWdkdOp6dvzCf7F7uvQjYdqTV9Q+sVAlG/oVM1a6peaHmX7aGBXWP2A9aY00F0VazLAoF7xuzHLKHNmyo1IOWSd475kIUWWgdxquX0/sqqQNfmndpvQIg6hV46y+HPN0wTf436Q+vzI75KIqRY0mNWahqzv4nleuchNXdeeBrqONYMMf75hqmbfBauqfNgGmpM2gPE8PP3Y2L2L/ti13fjB9JJfs4F1NhPAAAAAElFTkSuQmCC" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="https://iccida.com/" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-item" data-index="4" data-mode="in-person" data-period="urgent">
+      <div class="conf-card amber-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-amber">#5 · 1.2 Months Left</span>
+            <span class="mode-pill mode-inperson">🏛️ In-Person</span>
+          </div>
+          <div class="card-title">ICFEC 2027</div>
+          <div class="card-subtitle">11th IEEE Int. Conference on Fog and Edge Computing</div>
+          <div class="folder-tag">📁 1th IEEE International Conference on Fog and Edge Computing</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val amber">20 Dec 2026</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">20 Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">16 Mar 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">16 Mar 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">24–27 May 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Dallas-Fort Worth, Texas, USA</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val urgent">In-Person (Co-located with IEEE CCGrid)</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">~$800–$950 (Mem) · ~$1,050–$1,200 (Non-Mem) · $500–$650 (Student)</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">Up to 8 pages (Regular) / 4 pages (Short)</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">IEEE 2-column format (Letter)</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">IEEE CPS, IEEE Xplore, Scopus, EI Compendex</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAEIAQAAAACLjVdSAAABnklEQVR4nO1ay27DMAwTjf3/L3MQaTm59TRBmJsUqeIIKMFSD6sF48OxPjnE1+P/8vETAVsMUCaRmjmr1/ERChmIAaaRF9bqGKSrzwM4aogUiSip1VFIez2QBIgQ/OGnjI+XfRCsrDER6erjg+eW0Mt2J441xCNYZGQGfZ/1eArS1eKBRxuwPGxyHNLV5YHDBpMRFd582wVmENIeD1oQSUBUCwISWzqDkLbpA6kHVhuWF90qtwxC2lNf+HSmceJGHPFOfSANxUhUa6rwMUWDkHblD4oAqr6UXhxHs5D21Fu4CXuIqLprrUxBuho9qJwBL5H79sZ4QcVKNWbwTkbnhfrAri5PnwqtKJ8qp05Buvo86L0+8vT0IyOGKjizkLZ4MA2efZxjJ+uvHk1C2rO/5RZEpCiSnB07Mq/f38Lp9Gxyr8yn8Z6vh0uOO9QL52N8TT/wjId2IpmCdPV5YG9hqGvUkhv2UUibPbjJcGo1QTORdngwM6hEkYGjCRlvnq/Dgtg/V1Yjfx8fsAlvcj0/NRv39WP4/t9h5Peyhnj8AuRrufsxuGWrAAAAAElFTkSuQmCC" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="https://fcrlab.unime.it/icfec2027" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-item" data-index="5" data-mode="hybrid" data-period="urgent">
+      <div class="conf-card amber-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-amber">#6 · 1.5 Months Left</span>
+            <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+          </div>
+          <div class="card-title">SADASC'27</div>
+          <div class="card-subtitle">7th Int. Conf. on Smart Applications & Cyber-Physical Systems</div>
+          <div class="folder-tag">📁 The International Conference on Smart Applications and Data Analysis...</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val amber">31 Dec 2026</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">15 Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">24 Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">15 Mar 2027 (Early cutoff)</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">10–11 Jun 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Córdoba, Andalusia, Spain</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val teal">Hybrid / Online Track Supported</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">Online: €180 (Reg) / €140 (Student) · On-site: €250/€200</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">12–15+ pages (Long) / 6–8p (Short)</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">Springer CCIS single-column format</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">Springer CCIS, Scopus, DBLP, Web of Science</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABQklEQVR4nO1Yy47EMAjDaP7/l73CkM1oD71kqrJoIjVC4WKXR0xAu1h+5bSvt//feJkhLcoi+HYykq8ppWEwiii4TobytYirVWxz1clQvrXA4FnJ3Bizf8ZLUSV7obojvkybUcGZ05zMF2kiOnO1rIdR+W1e8I+JFdsnUfmdXshAbRHk6Fqx9cV8Fl+IJYv1EhzsitkPvYieDEZcM5eTNabmM8UZJTpEm1P1husakppEKeii/TCq++oXuoP426C5v56Y/cBrjHguwWFbXsnuidlPvcyKtepXKl4FuzHmIy9zCmSeRT1nw+qM+VxfmVpXTvyc/75Bq2FhN66Z8wJ3EiNDrANOf9+wqOE18SPyuidm/5SXS2rEJTVzXvA3m6WgJaeH3kev2PY9ROnKld/T3zewG1a26NH377/B7F/v27r+Gz/OFHrL6GZtewAAAABJRU5ErkJggg==" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="https://sadasc.com/" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-item" data-index="6" data-mode="hybrid" data-period="urgent">
+      <div class="conf-card amber-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-amber">#7 · 1.5 Months Left</span>
+            <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+          </div>
+          <div class="card-title">IEEE IC3ECSBHI-2027</div>
+          <div class="card-subtitle">3rd IEEE Int. Conf. on Cognitive Computing in Eng., Comms., Sciences & Biomedical Health</div>
+          <div class="folder-tag">📁 IEEE IC3ECSBHI-2027 (Delhi-NCR)</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val amber">31 Dec 2026</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">15 Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">31 Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">31 Jan 2027 (Cutoff 10 Mar)</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">09–11 Apr 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Greater Noida, Delhi-NCR, India</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val teal">Physical (Online with Prior Approval)</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">$350–$450 USD (Foreign) · ₹7,000–₹11,000 INR</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">Up to 6 pages (Max 8 with fee)</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">IEEE Conference 2-column format (A4)</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">IEEE Xplore (Record #73802), Scopus</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAEIAQAAAACLjVdSAAABlElEQVR4nO1Zy47DMAhkrP7/L8+KATvJXnpaRJc6TexQpKIRr6GgvVnrnYJ9Nf4vHkb+OtD4kHaxdJVovISAmcFAmBGg+WFLbR4e5jg4FOb3SSghbWPpKtfgxgJsbmmJBhwGeuAY8Ge/8gnxQh0pFDyBBBocXl/see2vu1i6SjRwSxVIx7h8o86O1UcDeZmDIyA8iai+oJelRf4B+UMmDfCIoM/AfgzuELpVY3z5FuEz0D+Y7oAdKoIj3GMeHkgHsVuTHklE3WoXS1eVBg9doVoQUDV4CxtZWlVfjN6RMlzlQmJqfbHccOd0yh7z8sfa6UIOwii8yiYYyffXzqGKFih2ks6k1zSytKb/QHReESgROJ5QA6GJ/oFIGQy+f6u3em1kaVH/wd2c2kHhNGV9LF3V/BZqy656k/3qwP5U68wKI3z2PpHP2Wb3zDH7GSuPyx/LH9CkEMFyY7koeH8rS0v8Ixch+hIsX1gM5PvrOsIf139zHjkcPV+3O4uJIQAnz9dNb9mUpWjyfL23peur8Vg1ePwA14++64gBVScAAAAASUVORK5CYII=" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="https://www.ic3ecsbhi.com/index.html" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-item" data-index="7" data-mode="hybrid" data-period="future">
+      <div class="conf-card amber-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-amber">#8 · 1.7 Months Left</span>
+            <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+          </div>
+          <div class="card-title">AbjadNLP 2027 (@ COLING)</div>
+          <div class="card-subtitle">3rd Workshop on NLP for Languages Using Arabic Script</div>
+          <div class="folder-tag">📁 AbjadNLP</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val amber">05 Jan 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">06 Feb 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">05 Mar 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">15 Apr 2027 (Video deadline)</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">09–14 May 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Macau, China (Co-located with COLING)</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val teal">Hybrid / Pre-recorded Video Supported</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">~$200–$350 USD (Virtual Workshop) · ~$450–$650 (In-pers.)</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">8 pages (Long) / 4 pages (Short) + unlim. refs</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">Official ACL / COLING LaTeX style</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">ACL Anthology, Scopus, Google Scholar, DBLP</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABPElEQVR4nO1YyxKDMAhkM/7/L2+HJfi4eFFHyphqS+CyGx6BgnayxpnRPmv901jMEBJBydw0PfmaQhpGf530qmnK1w5etU3TlW8siqf7uTjmcZcVII0ohup+/1IiSGDu2JkvcgOCMHjhehfVeMyKY7+BWaBfRjWetELuxHoNh8elLYv5mpVeqUxSMvXALo35ghXYuitf3nZEoNfFfMFKuocJp638jb3/lMV8LX+JSF+mVk1Hy/xdlLPuVcwn7yL0nY+oNhIR2HFHSdn1/sUMZESBlotpjf1rCmLOkTDo+iH0zF/L2chXxPS8oZr6dyUKT+Fdk9n9/w1GfV5JN50HkXUZ0s3AbhnP47Cjf/RER10D1UNWaE6I7zkEF0D1RDzTckqyTF+1z035IkSIsqTsLpv2V3+GeXzW3To/jR9E8HPwE7wB8wAAAABJRU5ErkJggg==" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="https://abjadnlp.com/" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-item" data-index="8" data-mode="in-person" data-period="future">
+      <div class="conf-card teal-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-teal">#9 · 3.5 Months Left</span>
+            <span class="mode-pill mode-inperson">🏛️ In-Person</span>
+          </div>
+          <div class="card-title">ICEDEG 2027</div>
+          <div class="card-subtitle">13th Int. Conference on eDemocracy & eGovernment</div>
+          <div class="folder-tag">📁 edem-egov</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val amber">28 Feb 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">21 Apr 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">15 May 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">15 May 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">07–09 Jul 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Universitat Rovira i Virgili, Tarragona, Spain</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val urgent">In-Person Only (Strict Attendance Policy)</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">650 CHF (~€690 / $730) Reg · 550 CHF (~€585 / $620) Student</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">6 to 8 pages (Long) / 4 to 6 pages (Short)</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">IEEE 2-column format (Double-blind)</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">IEEE Xplore, Scopus, EI Compendex</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABPklEQVR4nO1Yyw7CQAicIf7/L4/hsU299GCtReKaGApJwxQYYCkcHDsy4m/t/zUeAFMSAMoftGlG4kWkNEFIDlibZiheMBBqRXrTNPXZPmZVJHU3ry6y0lO6AvvZN3fLZ70QFlcBT8XLFClHGuzM1j7bCSv1KhOJ+l6v7Eor64ek5SWws88n48sMKl12wKVs6rOdsEJa5CTI+1H0pNBJQ+PLxc1yKZ/CMrR+ITK6b4U6q3fkPGnFUJ7W+4Fy8DzJnJ1FbqXrXWkuP7PYWWsfLBlj+VkhIVl56TWWn/PQ/4qePaGn7vtMSdGOVmbf65V9434D8qDWDce9Xtk37jcYq8JuOxqLN4+qgAN65vTs+w1FeLMj5fDRwKsrrIpBQ1W6ATmZq7HP7/cjpqTYFTKZq5yH32/8is/2t+7O8dd4ApUjhMHTFOEeAAAAAElFTkSuQmCC" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="https://edem-egov.org/" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-item" data-index="9" data-mode="hybrid" data-period="future">
+      <div class="conf-card teal-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-teal">#10 · 4.5 Months Left · Relaxed</span>
+            <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+          </div>
+          <div class="card-title">IEEE FACT-2027</div>
+          <div class="card-subtitle">2027 IEEE Int. Conf. on Futuristic AI Concepts & Techniques</div>
+          <div class="folder-tag">📁 IEEE FACT-2027 (Bhopal)</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val amber">30 Mar 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">30 Apr 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">10 May 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">15 May 2027 (Early-bird)</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">25–26 Jun 2027</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Bhopal, Madhya Pradesh, India</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val teal">Native Hybrid (On-site + Online)</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">$180–$200 USD (Foreign) · ₹6,000–₹8,500 INR</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">Up to 8 full pages in IEEE format</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">IEEE Conference 2-column format (A4)</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">IEEE CPS, IEEE Xplore, Scopus</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAEIAQAAAACLjVdSAAABmElEQVR4nO1Y0W4CMQyLK/7/lz3FTq/cXnjZSrdwQOn1IhGi2HECxotrvDKIj8X/jccjAt4xkLkC6oDXabt4hCCDikguyGjM037xiPnv80KmhjPFp6d4OrZbQHBhBgPv9OPt+VEXEymiDkbreFBbUCTqT8blLE/HFovgzIWk0ufXfHyKp2OLBZ6gAQFG1MHzPB27LJBvwPUkGYSkb0/zdB9eKMLgBIpvddAPLyhFGrq3NC39kd8d6y2TO6JK7RJj6IsX1o4XWCaG+tUXVNMSU5feFFm/+kKXmCjKEK3qCGjXzw2tRgsUDdXe2eK249Oh1ckQyhTBRo0/D/R0kz6FqwkNGzNJMgrYUp/GjAZu8l2PDvJ0jwXzO0kU2ppIBJif/JU/YhHfRTpXq69OpqH+eJYiVJJ4cYlpp9fhnadBYhIVXU3K2tXbx5qvo8Zj1wTEJaZhPwcrMtz7uSKSUzwduy2gJKk00YGGQgd6useCBRIJ9jVXPdDT38YLvaeJY9GqoNNy/hErKLF6fQmQtvrjcE/Hx+J27YnHF3eRzM8gGEgBAAAAAElFTkSuQmCC" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="https://fact2027.acors.org/" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="conf-item" data-index="10" data-mode="hybrid" data-period="urgent">
+      <div class="conf-card teal-card">
+        <div>
+          <div class="card-top">
+            <span class="card-rank badge-teal">#11 · Annual Cycle (Conf: Dec 11–13)</span>
+            <span class="mode-pill mode-hybrid">🌐 Hybrid / Online</span>
+          </div>
+          <div class="card-title">ICCR</div>
+          <div class="card-subtitle">International Conference on Control and Robotics</div>
+          <div class="folder-tag">📁 ICCR - Call for Papers</div>
+          
+          <ul class="card-details">
+            <li>
+              <span class="lbl">Paper Submission</span>
+              <span class="val amber">Rolling / Autumn Cycle</span>
+            </li>
+            <li>
+              <span class="lbl">Notification</span>
+              <span class="val">~1 month post-submission</span>
+            </li>
+            <li>
+              <span class="lbl">Camera-Ready</span>
+              <span class="val">01 Nov (Early Reg)</span>
+            </li>
+            <li>
+              <span class="lbl">Registration Due</span>
+              <span class="val">01 Nov</span>
+            </li>
+            <li>
+              <span class="lbl">Conference Dates</span>
+              <span class="val" style="color:var(--navy);">11–13 Dec (Annual)</span>
+            </li>
+            <li>
+              <span class="lbl">Location</span>
+              <span class="val">Hosei University, Tokyo, Japan</span>
+            </li>
+            <li>
+              <span class="lbl">Attendance Mode</span>
+              <span class="val teal">Hybrid / Online Oral Presentation Supported</span>
+            </li>
+            <li>
+              <span class="lbl">Author Fee</span>
+              <span class="val">$560–$620 USD (Reg) · $500–$580 (Student) · $400–$450 (Presenter)</span>
+            </li>
+            <li>
+              <span class="lbl">Page Budget</span>
+              <span class="val">Standard 6 pages included in IEEE format</span>
+            </li>
+            <li>
+              <span class="lbl">Template</span>
+              <span class="val" style="font-size:10.5px;">IEEE Conference 2-column format</span>
+            </li>
+            <li>
+              <span class="lbl">Indexing</span>
+              <span class="val" style="font-size:10px;">IEEE Xplore, EI Compendex, Scopus</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="card-footer">
+          <img class="qr-code-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQAAAADN0pXVAAABPklEQVR4nO1ZQQ7CMAyzK/7/ZaM46bQTBzqkKKJII2suMXE8d1D4sNanJP7Z/r/GC2BGciCAunZG4oUpzcQKxtfemYkXhVWJlcZtzEPx1mJyW91rXo9lpextr6oe76/qRkHooPPemYmXFcvKHPNLDMar60YlU+pd8zrIMgjsdqpudsNn6vOKi/wBQCOlQrjYu+Yvs1BosuHKwWazN3rWvA6zTHtBMrTK9qqg9635YH6xFVo1vKnSM/3z8tCavMgBzv5mo9vWfJSVnSRzdml2c/R5AcljBvBSq2T1VLwss4G6xjM5CD5Vr7y4j72Tz4O8zLJu5+DtuIbqVSy4sddLndTrvjUfzS9vRwRZn+uR3LPm9VSWCo/lUH2q+lmW9hgsHz2Yz3KoMpP5vk4Yi5cZchvJyfPL//8pt9WzRyfZN3aDiLpn7HYbAAAAAElFTkSuQmCC" alt="QR Code">
+          <div class="footer-action">
+            <a class="btn-visit" href="http://www.iccr.net/" target="_blank">Visit Website / CFP ↗</a>
+            <div class="qr-hint">Scan QR on phone or click to open</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  // Filter Functionality
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const allItems = document.querySelectorAll('.conf-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter');
+
+      allItems.forEach(item => {
+        const mode = item.getAttribute('data-mode');
+        const period = item.getAttribute('data-period');
+        if (filter === 'all') {
+          item.style.display = '';
+        } else if (filter === 'hybrid' && mode === 'hybrid') {
+          item.style.display = '';
+        } else if (filter === 'inperson' && mode === 'inperson') {
+          item.style.display = '';
+        } else if (filter === 'urgent' && period === 'urgent') {
+          item.style.display = '';
+        } else if (filter === 'future' && period === 'future') {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      updateCarouselIndicators();
+    });
+  });
+
+  // View Mode Switching
+  function setViewMode(mode) {
+    const grid = document.getElementById('gridContainer');
+    const carousel = document.getElementById('carouselWrapper');
+    const btnGrid = document.getElementById('btn-view-grid');
+    const btnCarousel = document.getElementById('btn-view-carousel');
+
+    if (mode === 'carousel') {
+      grid.style.display = 'none';
+      carousel.style.display = 'block';
+      btnGrid.classList.remove('active');
+      btnCarousel.classList.add('active');
+      updateCarouselIndicators();
+    } else {
+      grid.style.display = 'grid';
+      carousel.style.display = 'none';
+      btnGrid.classList.add('active');
+      btnCarousel.classList.remove('active');
+    }
+  }
+
+  // Carousel Navigation & Touch Swipe
+  const viewport = document.getElementById('carouselViewport');
+  
+  function scrollCarousel(dir) {
+    const slide = viewport.querySelector('.carousel-slide');
+    if (!slide) return;
+    const slideWidth = slide.offsetWidth + 16;
+    viewport.scrollBy({ left: dir * slideWidth, behavior: 'smooth' });
+    setTimeout(updateActiveIndicator, 300);
+  }
+
+  function jumpToConference(index) {
+    setViewMode('carousel');
+    const slides = viewport.querySelectorAll('.carousel-slide');
+    if (slides[index]) {
+      slides[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+      setTimeout(updateActiveIndicator, 300);
+    }
+  }
+
+  function updateCarouselIndicators() {
+    const container = document.getElementById('carouselIndicators');
+    container.innerHTML = '';
+    const visibleSlides = Array.from(viewport.querySelectorAll('.carousel-slide')).filter(s => s.style.display !== 'none');
+    visibleSlides.forEach((slide, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'indicator-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => {
+        slide.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+        setTimeout(updateActiveIndicator, 300);
+      };
+      container.appendChild(dot);
+    });
+  }
+
+  function updateActiveIndicator() {
+    const visibleSlides = Array.from(viewport.querySelectorAll('.carousel-slide')).filter(s => s.style.display !== 'none');
+    const dots = document.querySelectorAll('.indicator-dot');
+    const viewCenter = viewport.scrollLeft + viewport.offsetWidth / 2;
+
+    visibleSlides.forEach((slide, i) => {
+      const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+      if (Math.abs(viewCenter - slideCenter) < slide.offsetWidth / 2) {
+        dots.forEach(d => d.classList.remove('active'));
+        if (dots[i]) dots[i].classList.add('active');
+      }
+    });
+  }
+
+  viewport.addEventListener('scroll', () => {
+    updateActiveIndicator();
+  });
+
+  // Touch Swipe Handlers for smooth mobile gestures without getting stuck
+  let touchStartX = 0;
+  let touchEndX = 0;
+  viewport.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  viewport.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    if (touchStartX - touchEndX > 50) {
+      scrollCarousel(1);
+    } else if (touchEndX - touchStartX > 50) {
+      scrollCarousel(-1);
+    }
+  }, { passive: true });
+
+  // Initialize
+  updateCarouselIndicators();
+</script>
+
+</body>
+</html>
